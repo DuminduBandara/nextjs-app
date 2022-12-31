@@ -67,17 +67,17 @@ const Homepage = ({data}) => (
                 </div>
                 <h2 className="text-3xl my-4 font-body">
                     {en.title} 
-                    <motion.button 
-                        whileHover={{
-                            x: 10,
-                            transition: {type: 'spring', duration: 0.5},
-                        }}
-                        whileTap={{ scale: 0.9 }}
-                        className="text-xl ml-6 p-3 bg-black text-white rounded-lg">
-                        See Events
-                    </motion.button>
                 </h2>
                 <p className="text-[1rem] font-para font-semibold">{en.description}</p>
+                <motion.button 
+                    whileHover={{
+                        x: 10,
+                        transition: {type: 'spring', duration: 0.5},
+                    }}
+                    whileTap={{ scale: 0.9 }}
+                    className="text-xl mt-3 p-3 bg-black text-white rounded-lg w-[150px] md:w-[200px]">
+                    See Events
+                </motion.button>
             </Link>
             ))}
         </motion.main>
