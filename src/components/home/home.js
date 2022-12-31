@@ -65,7 +65,18 @@ const Homepage = ({data}) => (
                         <Image src={en.image} alt="" width={"1000"} height={"500"}/>
                     </motion.div>
                 </div>
-                <h2 className="text-3xl my-4 font-body">{en.title}</h2>
+                <h2 className="text-3xl my-4 font-body">
+                    {en.title} 
+                    <motion.button 
+                        whileHover={{
+                            x: 10,
+                            transition: {type: 'spring', duration: 0.5},
+                        }}
+                        whileTap={{ scale: 0.9 }}
+                        className="text-xl ml-6 p-3 bg-black text-white rounded-lg">
+                        See Events
+                    </motion.button>
+                </h2>
                 <p className="text-[1rem] font-para font-semibold">{en.description}</p>
             </Link>
             ))}
